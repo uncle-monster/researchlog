@@ -1,0 +1,32 @@
+{
+    "name": "researchlog",
+    "displayName": "researchlog",
+    "description": "记录科研人员不同时间点科研想法的 VS Code 插件。",
+    "version": "0.0.1",
+    "publisher": "your-name",
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "main": "./extension.js",
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "researchlog.createLog",
+                "title": "Researchlog: 创建当天科研日志"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "researchlog.createLog",
+                "key": "ctrl+alt+r",
+                "when": "editorTextFocus"
+            }
+        ]
+    }
+}
